@@ -1,0 +1,979 @@
+{
+    "dns": {
+        "servers": [
+            {
+                "tag": "adg",
+                "address": "192.168.50.110",
+                "detour": "direct"
+            },
+            {
+                "tag": "fakeip",
+                "address": "fakeip"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "adg",
+                "disable_cache": true
+            },
+            {
+                "clash_mode": "direct",
+                "server": "adg"
+            },
+            {
+                "clash_mode": "global",
+                "server": "adg"
+            },
+            {
+                "rule_set": "cn",
+                "server": "adg"
+            },
+            {
+                "rule_set": "geolocation-!cn",
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "fakeip",
+                "rewrite_ttl": 1
+            }
+        ],
+        "final": "adg",
+        "independent_cache": true,
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0\/15",
+            "inet6_range": "fc00::\/18"
+        }
+    },
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "🚀 节点选择",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🐟 漏网之鱼",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🎮 国外游戏",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "📲 电报消息",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🎥Youtube",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🎥Netflix",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "📲X/Twttier",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "📲Ins",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "📲Discord",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🎥TikTok",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🤖 人工智障",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "⏱️Speedtest测速",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "📢 谷歌服务",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🍎 苹果服务",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "Ⓜ️ 微软服务",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "GLOBAL",
+            "outbounds": [
+                "🇭🇰 香港节点",
+                "🇭🇰 香港节点-测速",
+                "🇹🇼 台湾节点",
+                "🇹🇼 台湾节点-测速",
+                "🇯🇵 日本节点",
+                "🇯🇵 日本节点-测速",
+                "🇰🇷 韩国节点",
+                "🇰🇷 韩国节点-测速",
+                "🇸🇬 新加坡节点",
+                "🇸🇬 新加坡节点-测速",
+                "🇺🇸 美国节点",
+                "🇺🇸 美国节点-测速",
+                "UK 英国节点",
+                "UK 英国节点-测速",
+                "SE 瑞典节点",
+                "SE 瑞典节点-测速",
+                "TR 土耳其节点",
+                "TR 土耳其节点-测速",
+                "📺 省流节点",
+                "👍 高级节点",
+                "🚀 手动切换",
+                "🎯 本机直连"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "🚀 手动切换",
+            "use_all_providers": true
+        },
+        {
+            "type": "selector",
+            "tag": "📺 省流节点",
+            "use_all_providers": true,
+            "includes": "0.[1-5]|低倍率|省流|大流量|HY|hy"
+        },
+        {
+            "type": "selector",
+            "tag": "👍 高级节点",
+            "use_all_providers": true,
+            "includes": "专线|专用|高级|急速|高倍率|游戏|game|Game|GAME|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC"
+        },
+        {
+            "type": "selector",
+            "tag": "🇭🇰 香港节点",
+            "use_all_providers": true,
+            "includes": "港|HK|Hong Kong"
+        },
+        {
+            "type": "urltest",
+            "tag": "🇭🇰 香港节点-测速",
+            "use_all_providers": true,
+            "includes": "港|HK|Hong Kong",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "🇹🇼 台湾节点",
+            "use_all_providers": true,
+            "includes": "台|新北|彰化|TW|Taiwan",
+        },
+        {
+            "type": "urltest",
+            "tag": "🇹🇼 台湾节点-测速",
+            "use_all_providers": true,
+            "includes": "台|新北|彰化|TW|Taiwan",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "🇯🇵 日本节点",
+            "use_all_providers": true,
+            "includes": "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan"
+        },
+        {
+            "type": "urltest",
+            "tag": "🇯🇵 日本节点-测速",
+            "use_all_providers": true,
+            "includes": "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "🇰🇷 韩国节点",
+            "use_all_providers": true,
+            "includes": "KR|Korea|KOR|首尔|韩|韓",
+        },
+        {
+            "type": "urltest",
+            "tag": "🇰🇷 韩国节点-测速",
+            "use_all_providers": true,
+            "includes": "KR|Korea|KOR|首尔|韩|韓",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "🇸🇬 新加坡节点",
+            "use_all_providers": true,
+            "includes": "新加坡|坡|狮城|SG|Singapore"
+        },
+        {
+            "type": "urltest",
+            "tag": "🇸🇬 新加坡节点-测速",
+            "use_all_providers": true,
+            "includes": "新加坡|坡|狮城|SG|Singapore",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "🇺🇸 美国节点",
+            "use_all_providers": true,
+            "includes": "美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States"
+        },
+        {
+            "type": "urltest",
+            "tag": "🇺🇸 美国节点-测速",
+            "use_all_providers": true,
+            "includes": "美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "UK 英国节点",
+            "use_all_providers": true,
+            "includes": "UK|英|大不列颠"
+        },
+        {
+            "type": "urltest",
+            "tag": "UK 英国节点-测速",
+            "use_all_providers": true,
+            "includes": "UK|英|大不列颠",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "SE 瑞典节点",
+            "use_all_providers": true,
+            "includes": "SE|瑞典"
+        },
+        {
+            "type": "urltest",
+            "tag": "SE 瑞典节点-测速",
+            "use_all_providers": true,
+            "includes": "SE|瑞典",
+            "tolerance": 100
+        },
+        {
+            "type": "selector",
+            "tag": "TR 土耳其节点",
+            "use_all_providers": true,
+            "includes": "TR|土耳其"
+        },
+        {
+            "type": "urltest",
+            "tag": "TR 土耳其节点-测速",
+            "use_all_providers": true,
+            "includes": "TR|土耳其",
+            "tolerance": 100
+        },
+        {
+            "type": "direct",
+            "tag": "🎯 本机直连"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "clash_mode": "Global",
+                "outbound": "GLOBAL"
+            },
+            {
+                "clash_mode": "Direct",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "private",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "ai",
+                "outbound": "🤖 人工智障"
+            },
+            {
+                "rule_set": "bing",
+                "outbound": "🤖 人工智障"
+            },
+            {
+                "rule_set": "gemini",
+                "outbound": "🤖 人工智障"
+            },
+            {
+                "rule_set": "telegramip",
+                "outbound": "📲 电报消息"
+            },
+            {
+                "rule_set": "youtube",
+                "outbound": "🎥Youtube"
+            },
+            {
+                "rule_set": "Netflix",
+                "outbound": "🎥Netflix"
+            },
+            {
+                "rule_set": "Discord",
+                "outbound": "📲Discord"
+            },
+            {
+                "rule_set": "X",
+                "outbound": "📲X/Twttier"
+            },
+            {
+                "rule_set": "Tiktok",
+                "outbound": "🎥TikTok"
+            },
+            {
+                "rule_set": "Ins",
+                "outbound": "📲Ins"
+            },
+            {
+                "rule_set": "steam",
+                "outbound": "🎮 国外游戏"
+            },
+            {
+                "rule_set": "origin",
+                "outbound": "🎮 国外游戏"
+            },
+            {
+                "rule_set": "speedtest",
+                "outbound": "⏱️Speedtest测速"
+            },
+            {
+                "rule_set": "google",
+                "outbound": "📢 谷歌服务"
+            },
+            {
+                "rule_set": "apple",
+                "outbound": "🍎 苹果服务"
+            },
+            {
+                "rule_set": "microsoft",
+                "outbound": "Ⓜ️ 微软服务"
+            },
+            {
+                "rule_set": "proxy",
+                "outbound": "🚀 节点选择"
+            },
+            {
+                "rule_set": "github",
+                "outbound": "🚀 节点选择"
+            },
+            {
+                "rule_set": "docker",
+                "outbound": "🚀 节点选择"
+            },
+            {
+                "rule_set": "cnip",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "tailscale",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "xiaomi",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "tencentgame@cn",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "steam@cn",
+                "outbound": "🎯 本机直连"
+            },
+            {
+                "rule_set": "geocn",
+                "outbound": "🎯 本机直连"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "private",
+                "format": "binary",
+                "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/private.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "ai",
+                "format": "binary",
+                "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/ai.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "proxy",
+                "format": "binary",
+                "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/proxy.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "telegramip",
+                "format": "binary",
+                "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/telegramip.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "cnip",
+                "format": "binary",
+                "url": "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/cnip.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "geocn",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-cn.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "youtube",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-youtube.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "speedtest",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-speedtest.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "tencentgame@cn",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-tencent-games%40cn.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "steam@cn",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-steam%40cn.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "bilibiligame@cn",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-bilibili-game%40cn.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "steam",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-steam.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "X",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-x.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "Ins",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-instagram.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "Netflix",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-netflix.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "Discord",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-discord.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "Tiktok",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-tiktok.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "openai",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-openai.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "bing",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-bing.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "gemini",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-google-gemini.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "google",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-google.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "apple",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-apple.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "microsoft",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-microsoft.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "github",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-github.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "docker",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-docker.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "xiaomi",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-xiaomi.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "tailscale",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-tailscale.srs",
+                "download_detour": "🎯 本机直连"
+            },
+            {
+                "type": "remote",
+                "tag": "origin",
+                "format": "binary",
+                "url": "https://ghproxy.05160715.xyz/https://github.com/lyc8503/sing-box-rules/blob/d0461a73ddd6b819136234b9ecc57bda3e317905/geosite-origin.srs",
+                "download_detour": "🎯 本机直连"
+            }
+        ],
+        "final": "🐟 漏网之鱼"
+    },
+    "log": {
+        "disabled": false,
+        "level": "info",
+        "timestamp": true
+    },
+    "outbound_providers": [
+    {
+      "type": "remote",
+      "path": "./providers/Allinone.yaml",
+      "tag": "Allinone",
+      "download_url": "http://substore.htt/2cXaAxRGfddmGz2yx1wA/download/collection/allinone?target=sing-box",
+      "download_ua": "clash.meta",
+      "download_interval": "24h0m0s",
+      "download_detour": "DIRECT",
+      "healthcheck_url": "https://www.gstatic.com/generate_204",
+      "healthcheck_interval": "10m0s"
+    }
+  ]
+}
